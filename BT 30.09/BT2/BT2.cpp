@@ -125,15 +125,25 @@ using namespace std;
     }
 
     void complex::nhan(complex z1, complex z2){
-        
+        complex z;
+        z.phanthuc = z1.phanthuc*z2.phanthuc - z1.phanao*z2.phanao;
+        z.phanao = z1.phanthuc*z2.phanao + z1.phanao*z2.phanthuc;
+        z.in(z);
     }
 
     void complex::chia(complex z1, complex z2){
-        
+        complex z;
+        z.phanthuc = (z1.phanthuc*z2.phanthuc + z1.phanao*z2.phanao)/(z2.phanthuc*z2.phanthuc + z2.phanao*z2.phanao);
+        z.phanao = (z1.phanao*z2.phanthuc - z1.phanthuc*z2.phanao)/(z2.phanthuc*z2.phanthuc + z2.phanao*z2.phanao);
+        z.in(z);
     }
 
     void complex::sosanh(complex z1, complex z2){
-        
+        if ((z1.phanthuc == z2.phanthuc) && (z1.phanao == z2.phanao)) {
+            cout << "       Hai so phuc nay bang nhau." << endl;
+        }else {
+            cout << "       Hai so phuc nay khac nhau." << endl;
+        }
     }
 
 //Hàm in

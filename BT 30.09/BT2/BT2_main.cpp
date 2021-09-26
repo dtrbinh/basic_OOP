@@ -99,7 +99,7 @@ void control(){
         cout << "       2. Tru hai so phuc." << endl;
         cout << "       3. Nhan hai so phuc." << endl;
         cout << "       4. Chia hai so phuc." << endl;
-        cout << "       6. So sanh hai so phuc." << endl;
+        cout << "       5. So sanh hai so phuc." << endl;
         cout << "       Lua chon: ";
         cin >> q3;
         switch (q3)

@@ -11,10 +11,17 @@ class student{
         string name;
         float math, liter;
     public:
+    
     //Khai báo friend
         friend istream& operator >> (istream& in, student& A);
         friend ostream& operator << (ostream& out, student&A);
-
+        friend bool operator > (student &a, student &b);
+        friend bool operator > (student &a, student &b);
+        friend bool operator < (student &a, student &b);
+        friend bool operator == (student &a, student &b);
+        friend bool operator != (student &a, student &b);
+        friend bool operator <= (student &a, student &b);
+        friend bool operator >= (student &a, student &b);
 
     //Nhóm tạo huỷ
         student();
@@ -23,12 +30,21 @@ class student{
         student(const student &clone_obj);
         ~student();
 
-    //Nhóm toán tử
-        //Nhập
-        istream& operator >>(istream& in, student& A);
-        //Xuất
-        ostream& operator <<(ostream& out, student&A);
+    //Nhóm toán tử so sánh DTB
+        student operator = (student &a);
 
 
 };
+
+    //Nhập
+        istream& operator >>(istream& in, student&A);
+    //Xuất
+        ostream& operator <<(ostream& out, student&A);
+
+        bool operator > (student &a, student &b);
+        bool operator < (student &a, student &b);
+        bool operator == (student &a, student &b);
+        bool operator != (student &a, student &b);
+        bool operator <= (student &a, student &b);
+        bool operator >= (student &a, student &b);
 #endif

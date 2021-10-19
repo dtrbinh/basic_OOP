@@ -10,6 +10,7 @@ class matrix{
 
         friend ostream& operator << (ostream& out, matrix&A);
         friend istream& operator >> (istream& in, matrix& A);
+
     public:
         matrix();
         matrix(int n);
@@ -22,7 +23,10 @@ class matrix{
             delete []arr;
         };
 
-
 };
+
+        matrix operator +(matrix &a, matrix &b);
+        matrix operator -(matrix &a, matrix &b); 
+        matrix operator *(matrix &a, matrix &b);
 
 #endif

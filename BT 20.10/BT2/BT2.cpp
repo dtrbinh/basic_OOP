@@ -21,10 +21,33 @@ using namespace std;
         this->arr;
     }
 
+    matrix::matrix(int x[]){
+
+        int count = sizeof(*x)/sizeof(int);
+        this->n = count;
+
+        int **arr = new int*[n];
+        for(int i = 0; i < n; i++) arr[i] = new int[n];
+
+        for(int i = 0; i < n; i++)
+        {
+            for(int j = 0; j < n; j++)
+            {   
+                this->arr[i][j] = x[j];
+            }
+        }
+        this->arr;
+    }
+
     matrix::matrix(const matrix &b){
-        matrix a;
+
         this->n = b.n;
-        this->arr = b.arr;
+
+        int **arr = new int*[b.n];
+        for(int i = 0; i < b.n; i++) arr[i] = new int[b.n];
+
+        arr = b.arr;
+        this->arr = arr;
     }
 
     //Đa năng hoá toán tử
@@ -48,15 +71,23 @@ using namespace std;
 
         //Xuất
         ostream& operator << (ostream& out, matrix &a){
-        printf("\nMa tran vua nhap la:\n");
         for(int i = 0; i<a.n; i++)
         {
             for( int j = 0; j < a.n; j++)
             {
-            cout << a.arr[i][j];
+            cout << a.arr[i][j] << "    ";
             }
             cout << "\n";
         }
         return out;
         }
 
+        matrix operator +(matrix &a, matrix &b){
+
+        }
+        matrix operator -(matrix &a, matrix &b){
+
+        } 
+        matrix operator *(matrix &a, matrix &b){
+            
+        }

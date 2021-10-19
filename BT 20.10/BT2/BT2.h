@@ -10,6 +10,10 @@ class matrix{
 
         friend ostream& operator << (ostream& out, matrix&A);
         friend istream& operator >> (istream& in, matrix& A);
+        
+        friend matrix operator +(matrix &a, matrix &b);
+        friend matrix operator -(matrix &a, matrix &b); 
+        friend matrix operator *(matrix &a, matrix &b);
 
     public:
         matrix();

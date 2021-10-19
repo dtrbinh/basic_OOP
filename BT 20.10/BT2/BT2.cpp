@@ -18,6 +18,7 @@ using namespace std;
             for(int j = 0; j < n; j++){
                 arr[i][j] = 0;
             }
+        cout << "Da tao ma tran vuong cap " << n << " voi cac phan tu bang 0.";
         this->arr;
     }
 
@@ -81,13 +82,40 @@ using namespace std;
         }
         return out;
         }
-
+    //Đa năng hoá toán tử
         matrix operator +(matrix &a, matrix &b){
-
+            matrix c(a.n);
+            if(a.n == b.n){
+                const int n = a.n;
+                for (int i = 0; i < n; i++)
+                    for (int j = 0; j < n; j++)
+                    {
+                        c.arr[i][j] = a.arr[i][j] + b.arr[i][j];
+                    };
+                return c;
+            }else {
+                cout << "Hai ma tran khong cung cap, khong the tinh toan.";
+            }             
+            return c;
         }
+
         matrix operator -(matrix &a, matrix &b){
+            matrix c(a.n);
+            if(a.n == b.n){
+                const int n = a.n;
+                for (int i = 0; i < n; i++)
+                    for (int j = 0; j < n; j++)
+                    {
+                        c.arr[i][j] = a.arr[i][j] - b.arr[i][j];
+                    };
+                return c;
+            }else {
+                cout << "Hai ma tran khong cung cap, khong the tinh toan.";
+            }             
+            return c;
 
         } 
         matrix operator *(matrix &a, matrix &b){
-            
+            matrix c;
+            return c;
         }

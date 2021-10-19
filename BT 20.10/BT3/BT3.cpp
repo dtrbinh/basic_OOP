@@ -32,14 +32,16 @@ polynomial::~polynomial(){
    istream& operator >> (istream& in, polynomial &a){
         
         int n;
-        cout << "Nhap bac da thuc: "; cin >> n;
-        int *arr = new int[n];
+        cout << "Nhap bac da thuc: ";
+        cin >> a.n;
+        n = a.n;
         cout << "Nhap he so da thuc:";
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i <= (a.n); i++)
             {
+                
                 cout << "a[" << n <<"] = ";
+                cin >> a.arr[i];
                 n--;
-                cin >> arr[i];
             }
         return in;
     }

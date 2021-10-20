@@ -71,4 +71,23 @@ GroupInteger::~GroupInteger(){
         return *this;
     }
 
-    
+    //Tìm hợp
+    GroupInteger operator +(GroupInteger &a, GroupInteger &b){
+        
+    }
+
+    //Tìm hiệu
+    GroupInteger operator -(GroupInteger &a, GroupInteger &b){
+
+    }
+
+    //Tìm giao
+    GroupInteger operator *(GroupInteger &a, GroupInteger &b){
+        GroupInteger a;
+        for (int i = 0; i < a.n; i++){
+                if( a(a.arr[i]) && b(a.arr[i]) )
+                    
+
+        };
+        return a;
+    }

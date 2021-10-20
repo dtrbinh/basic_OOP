@@ -19,7 +19,8 @@ class polynomial{
         //in bac da thuc
         void inbacdathuc(polynomial &f);
         int sosanh(polynomial &a, polynomial &b);
-        polynomial operator [] (polynomial &f);
+        int operator [] (polynomial &f);
+        float operator () (polynomial &f);
 
 };
 

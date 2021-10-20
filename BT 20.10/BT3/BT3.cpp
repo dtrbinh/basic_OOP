@@ -67,7 +67,7 @@ polynomial::~polynomial(){
     }
 
 //Toán tử
-    polynomial operator +(polynomial &f1, polynomial &f2){
+    polynomial operator + (polynomial &f1, polynomial &f2){
         f1.n = f1.sosanh(f1, f2);
         polynomial f(f1.n);
         int j = 0;
@@ -138,6 +138,39 @@ polynomial::~polynomial(){
         return f;
     }
 
-    polynomial polynomial::operator [] (polynomial &f){
-        
+    int polynomial::operator [] (polynomial &f){
+        int i = 0;
+        cout << "Chọn phần tử cần lấy";
+        cin >> i;
+        cout << "f[" << i << "] = " << f.arr[i];
+        return f.arr[i];
     }
+
+    float polynomial::operator () (polynomial &f){
+        float Z;
+        
+        return 0;
+    }
+
+    /*
+
+                              _
+                               _ooOoo_
+                              o8888888o
+                              88" . "88
+                              (| -_- |)
+                              O\  =  /O
+                           ____/`---'\____
+                         .'  \\|     |//  `.
+                        /  \\|||  :  |||//  \
+                       /  _||||| -:- |||||_  \
+                       |   | \\\  -  /'| |   |
+                       | \_|  `\`---'//  |_/ |
+                       \  .-\__ `-. -'__/-.  /
+                     ___`. .'  /--.--\  `. .'___
+                  ."" '<  `.___\_<|>_/___.' _> \"".
+                 | | :  `- \`. ;`. _/; .'/ /  .' ; |
+                 \  \ `-.   \_\_`. _.'_/_/  -' _.' /
+       ===========`-.`___`-.__\ \___  /__.-'_.'_.-'================
+    no bugs pls nooo
+    */

@@ -29,6 +29,10 @@ int main(){
     a = b;
     cout << a << "\n";
 
+    //Giao
+    GroupInteger e(x, 5);
+    e = b*c;
+    cout << a << "\n";
     return 0;
 
 }

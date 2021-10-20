@@ -73,21 +73,22 @@ GroupInteger::~GroupInteger(){
 
     //Tìm hợp
     GroupInteger operator +(GroupInteger &a, GroupInteger &b){
-        
+        GroupInteger z(a);
+
+        return z;
     }
 
     //Tìm hiệu
     GroupInteger operator -(GroupInteger &a, GroupInteger &b){
-
+        GroupInteger z(a);
+        return z;
     }
 
     //Tìm giao
     GroupInteger operator *(GroupInteger &a, GroupInteger &b){
-        GroupInteger a;
+        GroupInteger z(a);
         for (int i = 0; i < a.n; i++){
-                if( a(a.arr[i]) && b(a.arr[i]) )
-                    
-
+                if( a(a.arr[i]) && b(a.arr[i]) ) z.arr[i] = a.arr[i];
         };
-        return a;
+        return z;
     }
